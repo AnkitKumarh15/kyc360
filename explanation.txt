@@ -1,0 +1,23 @@
+1. Controller Definition:- [Route("api/entities")]: This attribute specifies the base route for the controller, so all endpoints will start with
+ "/api/entities".
+[ApiController]: This attribute indicates that the class is an API controller.
+
+-----------------------------------------------------------------------------------
+
+2. Data Storage: private readonly List<Entity> entities = new List<Entity>();: This line assumes that you have a list of entities stored in 
+memory. In a real-world scenario, you might use a database or another storage mechanism.
+
+--------------------------------------------------------------------------------------
+
+3. Listing Entities (GET api/entities) :  public ActionResult<IEnumerable<Entity>> GetEntities([FromQuery] string search): This method handles
+ the GET request to retrieve a list of entities.
+It accepts an optional query parameter search, which is used for searching entities based on specific fields.
+If search is not provided, it returns the complete list of entities.
+If search is provided, it filters entities based on the specified fields (names and addresses) and returns the search results.
+
+---------------------------------------------------------------------------------------------
+
+4. Retrieving Single Entity by ID (GET api/entities/{id}): public ActionResult<Entity> GetEntityById(string id): This method handles the GET 
+request to retrieve a single entity by its ID.
+It looks for an entity in the list with the specified ID and returns it if found, or returns a 404 Not Found response if the entity is not 
+present.

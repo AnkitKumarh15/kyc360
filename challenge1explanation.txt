@@ -1,0 +1,20 @@
+// Challenge 1 explanation
+
+Challenge 1 involves creating a C# API with CRUD (Create, Read, Update, Delete) operations for managing entities. 
+The provided code defines an interface (IEntity) and classes representing an entity with properties like addresses, dates, deceased status, gender,
+ID, and names. 
+------------------------------------------------------------------------------------------------------------
+
+The task is to implement the following:
+
+1.List Entities (GET api/entities):
+
+Provide an endpoint to fetch a list of entities.
+The endpoint should support optional searching and filtering capabilities based on fields like address country, address line, first name, middle 
+name, and surname.
+
+2. Retrieve Single Entity by ID (GET api/entities/{id}):
+
+Implement an endpoint to retrieve a single entity by its ID.
+The code includes a basic setup for an API controller using ASP.NET Core MVC, with data stored in-memory as a list of entities. The GetEntities 
+method handles searching and filtering based on the specified fields, while the GetEntityById method retrieves a single entity by its ID.

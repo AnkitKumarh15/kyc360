@@ -1,0 +1,18 @@
+// challenge 2 explanation 
+
+1. Create Entity (POST api/entities):
+
+Provide an endpoint to create a new entity by accepting a JSON payload in the request body.
+
+--------------------------------------------------------------
+
+2. Update Entity (PUT api/entities/{id}):
+
+Implement an endpoint to update an existing entity based on its ID. Again, this should accept a JSON payload in the request body.
+
+---------------------------------------------------------------------------------
+
+3. Delete Entity (DELETE api/entities/{id}):
+
+Create an endpoint to delete an entity based on its ID.
+To implement these CRUD operations, we can modify the existing EntityController class.
